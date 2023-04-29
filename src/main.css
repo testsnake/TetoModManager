@@ -1,0 +1,84 @@
+:root {
+    --title-bar-height: 32px;
+    --titlebar-bg-color: #2f3241;
+    --titlebar-text-color: #fff;
+    --navbar-bg-color: #353642;
+    --navbar-text-color: #fff;
+    --navbar-hover-color: #fff;
+    --navbar-hover-bg-color: #3a3d4d;
+    --navbar-active-color: #fff;
+    --navbar-active-bg-color: #3a3d4d;
+    --navbar-active-hover-color: #fff;
+    --navbar-active-hover-bg-color: #3a3d4d;
+    --navbar-height: 32px;
+}
+
+#titlebar {
+    display: flex;
+    background-color: var(--titlebar-bg-color);
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--title-bar-height);
+    z-index: 102;
+    color: var(--titlebar-text-color);
+}
+
+#titlebar-text {
+    position: absolute;
+    left: 32px;
+    top: -10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#body {
+    position: absolute;
+    top: var(--title-bar-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#navbar {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg-color);
+    height: var(--navbar-height);
+}
+
+.navbar-tab {
+    flex: 1;
+    text-align: center;
+    color: var(--navbar-text-color);
+    background-color: var(--navbar-bg-color);
+    border: none;
+    height: 100%;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+
+}
+
+.navbar-tab:hover {
+    color: var(--navbar-hover-color);
+    background-color: var(--navbar-hover-bg-color);
+}
+
+.navbar-tab:active {
+    color: var(--navbar-active-color);
+    background-color: var(--navbar-active-bg-color);
+}
+
+.navbar-tab:active:hover {
+    color: var(--navbar-active-hover-color);
+    background-color: var(--navbar-active-hover-bg-color);
+}
