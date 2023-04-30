@@ -12,12 +12,22 @@
     <div id="body">
         <div id="navbar">
 
-            <button class="navbar-tab" id="page-install-mods" data-i18n="pageInstallMods"></button>
-            <button class="navbar-tab" id="page-mod-list" data-i18n="pageModList"></button>
-            <button class="navbar-tab" id="page-settings" data-i18n="pageSettings"></button>
+            <button class="navbar-tab" id="button-page-install-mods" data-i18n="pageInstallMods"></button>
+            <button class="navbar-tab selected" id="button-page-mods-list" data-i18n="pageModList"></button>
+            <button class="navbar-tab" id="button-page-settings"  data-i18n="pageSettings"></button>
 
 
         </div>
+        <div id="page-install-mods" class="pageDisabled page content-page">
+            <h3>GB</h3>
+        </div>
+        <div id="page-mods-list" class="pageEnabled page content-page">
+            <h3>Mods</h3>
+        </div>
+        <div id="page-settings" class="pageDisabled page content-page">
+            <h3>Settings</h3>
+        </div>
+
     </div>
 </body>
 <script src="main.js"></script>
