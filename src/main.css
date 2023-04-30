@@ -15,6 +15,7 @@
     --navbar-height: 32px;
     --navbar-titlebar-padding: 5px;
     --navbar-titlebar-padding-side: 300px;
+    --gamepad-button-prompt-display: block;
 }
 
 body {
@@ -113,4 +114,18 @@ body {
 
 .pageDisabled {
     display: none;
+}
+
+.gamepad-prompt {
+    display: var(--gamepad-button-prompt-display);
+}
+
+.gamepad-prompt-tab {
+    height: calc(var(--navbar-height) - (var(--navbar-titlebar-padding) * 2));
+    width: calc(var(--navbar-height) - (var(--navbar-titlebar-padding) * 2));
+}
+
+.gamepad-prompt-img {
+    width: 100%;
+    height: 100%;
 }

@@ -12,9 +12,15 @@
     <div id="body">
         <div id="navbar">
 
+            <div class="gamepad-prompt gamepad-prompt-tab-left gamepad-prompt-tab" id="gamepad-prompt-tab-left">
+                <img src="img/button/PS4/PS4_L2.png" class="gamepad-prompt-img" alt="Gamepad">
+            </div>
             <button class="navbar-tab" id="button-page-install-mods" data-i18n="pageInstallMods"></button>
             <button class="navbar-tab selected" id="button-page-mods-list" data-i18n="pageModList"></button>
             <button class="navbar-tab" id="button-page-settings"  data-i18n="pageSettings"></button>
+            <div class="gamepad-prompt gamepad-prompt-tab-right gamepad-prompt-tab" id="gamepad-prompt-tab-right">
+                <img src="img/button/PS4/PS4_R2.png" class="gamepad-prompt-img" alt="Gamepad">
+            </div>
 
 
         </div>
@@ -25,7 +31,31 @@
             <h3>Mods</h3>
         </div>
         <div id="page-settings" class="pageDisabled page content-page">
-            <h3>Settings</h3>
+            <h3 data-i18n="settings-title"></h3>
+            <table>
+                <tr>
+                    <td data-i18n="settings-language"></td>
+                    <td>
+                        <select id="select-language">
+                            <option value="en">English</option>
+                            <option value="ja">日本語</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-i18n="settings-game-path"></td>
+                    <td>
+                        <input type="text" id="input-path" placeholder="C:\Program Files (x86)\Steam\steamapps\common\Hatsune Miku Project DIVA Mega Mix Plus">
+                    </td>
+                </tr>
+                <tr>
+                    <td data-i18n="settings-7zip-path"></td>
+                    <td>
+                        <input type="text" id="input-7zip-path" placeholder="C:\Program Files\7-Zip\7z.exe">
+                        <p data-i18n="settings-7zip-path-help"></p>
+                    </td>
+                </tr>
+            </table>
         </div>
 
     </div>

@@ -2,5 +2,12 @@
   "tetoModManager": "Teto Mod Manager",
   "pageInstallMods": "Install Mods",
   "pageModList": "Mod List",
-  "pageSettings": "Settings"
+  "pageSettings": "Settings",
+
+  "settings-title": "Settings",
+  "settings-language": "Language",
+  "settings-game-path": "Game Path",
+  "settings-7zip-path": "7zip Path",
+  "settings-7zip-path-help": "7zip is required to install mods. If you don't have it, you can download it from <a href='https://www.7-zip.org/'>here</a>."
+
 }
