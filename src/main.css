@@ -2,17 +2,19 @@
     --title-bar-height: 32px;
     --titlebar-bg-color: #2f3241;
     --titlebar-text-color: #fff;
-    --navbar-bg-color: #353642;
+    --navbar-bg-color: #494c57;
     --navbar-text-color: #fff;
     --navbar-hover-color: #fff;
-    --navbar-hover-bg-color: #3a3d4d;
+    --navbar-hover-bg-color: #4e5060;
     --navbar-active-color: #fff;
-    --navbar-active-bg-color: #3a3d4d;
+    --navbar-active-bg-color: #494c57;
     --navbar-active-hover-color: #fff;
     --navbar-active-hover-bg-color: #494c57;
     --navbar-selected-color: #fff;
-    --navbar-selected-bg-color: #494c57;
+    --navbar-selected-bg-color: #575a6b;
     --navbar-height: 32px;
+    --navbar-titlebar-padding: 5px;
+    --navbar-titlebar-padding-side: 300px;
 }
 
 body {
@@ -54,12 +56,15 @@ body {
 #navbar {
     display: flex;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--navbar-height);
+    top: calc((var(--title-bar-height) * -1) + var(--navbar-titlebar-padding));
+    left: var(--navbar-titlebar-padding-side);
+    right: var(--navbar-titlebar-padding-side);
+    height: calc(var(--navbar-height) - (var(--navbar-titlebar-padding) * 2));
     background-color: var(--navbar-bg-color);
-    height: var(--navbar-height);
+    -webkit-app-region: no-drag;
+    z-index: 103;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .navbar-tab {
@@ -73,6 +78,7 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
     cursor: pointer;
     -webkit-user-select: none;
+    border-radius: 0;
 
 }
 
@@ -99,7 +105,7 @@ body {
 .pageEnabled {
     display: block;
     position: absolute;
-    top: calc(var(--navbar-height));
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
